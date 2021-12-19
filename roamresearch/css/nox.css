@@ -1,0 +1,266 @@
+/* @import url('https://calrobertlee.github.io/roam-themes/nox.css') */
+/* copied here for reference */
+/*
+Theme:      Roam Nox Theme
+Version:    3.0.3
+Edits by:   Cal Robert Lee (https://www.calrobert.com/)
+Colors by:  Cal Robert Lee
+
+Hotfix:     - embed temporary patch
+            - nested ref temp patch
+
+Notes:      - Thanks to the supportive people on r/RoamResearch, GitHub and Twitter!
+            - I have been changing a lot of thing in my professional career! Which is the reason for some of the delays
+            - Super excited to have been selected to be on RoamResearch's Official theme's page!
+            - To install copy "@import url('https://calrobertlee.github.io/roam-themes/nox.css');" to roam/css page (without the quotes)
+*/
+
+/* IMPORT CORE THEME */
+@import url('https://calrobertlee.github.io/roam-themes/core.css');
+
+:root {
+  /* THEME COLORS */
+  --theme-blue-1: #81c6f3;
+  --theme-gray-1: #dcdedd;
+  --theme-white-1: #1e2022;
+
+  /* PRIMARY FONTS */
+  --main-font: 'Inter', sans-serif;
+  --main-font-color: var(--theme-gray-1);
+  --main-font-size: 1em;
+
+  /* FONT COLORS */
+
+  --page-link-color: var(--theme-blue-1);
+  --page-bracket-color: #5b5b5b;
+  --external-link-color: var(--theme-blue-1);
+  --external-link-hover-color: rgba(129, 198, 243, 0.73);
+  --alias-hover-color: hsl(230, 83%, 73%);
+  --daily-notes-link-color: none;
+  --sidebar-link-color: none;
+  --title-color: #c9d1d9;
+  --ref-title-color: #c9d1d9;
+  --header-color: var(--theme-gray-1);
+  --strong: var(--theme-gray-1);
+  --emphasis: var(--theme-gray-1);
+  --highlight-font-color: var(--theme-gray-1);
+  --highlight-background-color: #213784;
+  --highlight-link-color: var(--theme-blue-1);
+  --highlight-padding: 4px 5px 4px 5px;
+  --reference-header-color: #313b45;
+  --reference-header-underline-color: #313b4582;
+  --sidebar-font-color: #696969;
+  --sidebar-font-color-hover: #8f8f8f;
+  --sidebar-hover-bg: none;
+  --sidebar-font-hover-color: #8f8f8f;
+  --sidebar-shorcut-color: #9f9f9f52;
+
+  --tag-font-color: #515355;
+  --tag-bg-color: #24272a;
+  --tag-border-radius: 10px;
+  --tag-border: 1px solid #35373996;
+  --tag-padding: 1px 5px 2px;
+  --tagHover-font-color: #484a4c;
+  --tagHover-bg-color: #2d3033;
+  --tagHover-border: 1px solid #44464887;
+
+  --bullet-color: #62a7f5;
+  --bullet-closed-color: #528ed24d;
+  --bullet-closed-border-color: rgba(98, 167, 245, 0.3);
+  --multibar: hsl(210, 7%, 25%);
+  /*--bullet-position: ;*/
+
+  --checkmark-top: -1px;
+  --checkmark-left: -2px;
+  --checkmark-height: 14px;
+  --checkmark-width: 14px;
+  --checkmark-border-radius: 4px;
+  --checkmark-color: 1px solid var(--theme-white-1);
+  --checkmark-border: 1px solid hsl(207, 6%, 34%);
+  --checkmark-bg-color: var(--theme-white-1);
+  --checkedmark-border: 1px solid var(--theme-blue-1);
+  --checkedmark-bg-color: #5ba6fb;
+
+  --code-bg: #222629;
+  --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
+  --code-font-color: #dcdedd;
+  --code-font-size: 1em;
+  --code-border: 1px solid #34373b;
+
+  --codemirror-bg: #222629;
+  --codemirror-border-color: #323438;
+  --codemirror-border-radius: 3px;
+  --codemirror-linenumber: #515355;
+  --code-matchingbracket-color: #ead64c;
+
+  --cm-comment: #7f848e;
+  --cm-def: #d19a66;
+  --cm-keyword: #c678dd;
+  --cm-callee: #56b6c2;
+  --cm-operator: #56b6c2;
+  --cm-builtin: #56b6c2;
+  --cm-string: #98c379;
+  --cm-variable-3: #56b6c2;
+  --cm-variable-2: #e06c75;
+  --cm-variable: #e5c07b;
+  --cm-tag: #e06c75;
+  --cm-property: #61afef;
+  --cm-number: #d19a66;
+  --cm-atom: #d19a66;
+  --cm-qualifier: #d19a66;
+
+  --new-page-color: none;
+
+  --ref-count-font-size: 12px;
+
+  /* BACKGROUNDS & OUTLINES */
+
+  --body-bg: var(--theme-white-1);
+  --topbar-bg: rgba(30, 32, 34, 0);
+  --topbar-border-bottom: 0px solid #32343880;
+  --left-sidebar-bg: #242629;
+  --left-sidebar-border-right: 0px solid rgb(54, 56, 60);
+  --left-sidebar-divider-color: #45474a00;
+  --right-sidebar-bg: var(--theme-white-1);
+  --right-sidebar-border-left: 2px solid hsla(220, 6%, 5%, 0.31);
+  --divider-color: #43474a;
+  --allpage-bottom-border-color: #2d3133;
+  --reference-item-bg: #212325;
+  --reference-item-border-radius: 6px;
+  --reference-item-border: 1px solid rgb(39, 42, 45);
+
+  --block-highlight: #353a40;
+  --block-highlight-bg: #34641f;
+
+  --popover-bg: #2c2e31;
+  --popover-font-color: #dcdedd;
+  --popover-border: 0.5px solid rgb(70, 73, 77);
+
+  --inline-search-bg: var(--theme-white-1);
+  --inline-search-border-radius: 6px;
+  --inline-search-border: 1px solid #46494d;
+  --inline-search-button-bg-color: var(--theme-white-1);
+
+  --datepicker-bg: var(--inline-search-bg);
+  --datepicker-day-wrapper: #36393c;
+  --datepicker-altfont-color: #545d63;
+
+  --search-font-color: var(--theme-gray-1);
+  --search-body-font-color: #dcdedd;
+  --search-outline: #1e6897;
+  --search-bg: var(--theme-white-1);
+  --search-border-radius: 3px;
+  --search-selected-row: #2c2d30;
+
+  --block-ref-bg: none;
+  --block-ref-hover: none;
+  --block-ref-hover-bg: #353a40;
+  --block-ref-border-bottom: #393d42;
+
+  /*--pages-row-highlight: ;*/
+  --pages-header-row: var(--theme-white-1);
+  --pages-mentions-level-bg: #3c96ff;
+  --pages-mentions-level1-bg: #3d71ff;
+  --pages-mentions-level2-bg: #3c50ff;
+  --pages-mentions-font-color: var(--theme-white-1);
+
+  --icon-color: #7d8386;
+  --icon-bg-hover: #dadfe61c;
+  --icon-color-hover: #dae0e4;
+  --minirightbar-icon-color: #454d52;
+  --pin-color: #ff6312;
+
+  /* MISC */
+
+  --kanban-board-bg: #212326;
+  --kanban-board-border: 1px solid #32343880;
+  --kanban-board-border-radius: 10px;
+  --kanban-column-bg: #272a2d;
+  --kanban-column-font-color: var(--main-font-color);
+  --kanban-column-margin: 4px 8px 0px 4px;
+  --kanban-card-bg: var(--theme-white-1);
+  --kanban-card-font-color: var(--main-font-color);
+  --kanban-card-border-radius: 4px;
+  --kanban-card-border: 1px solid #323539;
+
+  --table-border: 1px solid #565656;
+
+  --embed-container-bg: hsl(213, 9%, 20%);
+
+  --astrolabe-bg-color: hsl(210, 6%, 20%);
+
+  --hr-color: #434547;
+
+  --blockquote-font-color: #ebebeb;
+  --blockquote-border-color: #62a7f5;
+  --blockquote-bg: #1e2022;
+  --blockquote-cite: #ebebeb;
+
+  --encrypted-font-color: #034b9e;
+  --encrypted-bg: hsl(212, 14%, 15%);
+  --encrypted-font-size: 13px;
+  --encrypted-font-weight: 300;
+  --encrypted-border-radius: 4px;
+  --encrypted-padding: 2px 4px;
+
+  --select-bg-color: var(--theme-white-1);
+  --select-border-color: #3a3f44;
+
+  --emoji-bg: #1f2830;
+  --emoji-border: 0px solid none;
+  --emoji-color: none;
+
+  --pomo-bg: #312625;
+  --pomo-border: var(--divider-color);
+  --pomo-running-border: #862c26;
+  --pomo-running-font-color: #e5493e;
+  --pomo-break-bg: #20372d;
+  --pomo-break-border: #10764c;
+  --pomo-break-font-color: #0d7a4d;
+
+  --query-results-border: none;
+  --query-border: 1px solid #3e3b28a8;
+  --query-border-radius: 6px;
+  --query-padding-bottom: 16px;
+  --query-title-font-color: #d0b94482;
+  --query-title-bg: #3d381e8f;
+
+  /* Scrollbar settings - to disable set values to none */
+  --scrollbar-track: true;
+  /*--scrollbar-thumb: ;*/
+}
+
+/* TEMP PATCH FOR EMBED */
+.rm-embed-container {
+  background-color: hsl(204, 10%, 18%);
+}
+
+.rm-embed-container .rm-embed-container {
+  background-color: hsl(204, 10%, 13%);
+}
+
+.rm-embed-container .rm-embed-container .rm-embed-container {
+  background-color: hsl(204, 10%, 18%);
+}
+
+.rm-embed-container
+  .rm-embed-container
+  .rm-embed-container
+  .rm-embed-container {
+  background-color: hsl(204, 10%, 13%);
+}
+
+/* TEMP PATCH FOR INLINE & NESTED REFS, THANKS b1uegh0st!!! */
+.rm-nested-refs {
+  background-color: hsl(227, 70%, 40%);
+  color: hsl(0, 0%, 91%);
+}
+.rm-inline-references {
+  background-color: hsl(204, 10%, 15%);
+}
+.rm-block__self .rm-block__ref-count.rm-active {
+  background-color: #1f2022;
+}
+.rm-zoom-path .rm-zoom-item {
+  color: hsl(0, 0%, 91%);
+}
