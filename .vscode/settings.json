@@ -1,0 +1,128 @@
+
+  {
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "ruby.intellisense": "rubyLocate",
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "[",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.focusFirstEditorGroup"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.focusLastEditorGroup"
+            ]
+        },
+        {
+            "before": [
+                "[",
+                "b"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
+                "]",
+                "b"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        }
+    ],
+    "vim.commandModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "breadcrumbs.enabled": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.tabSize": 2,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": false,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true,
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "typescriptreact"
+    ],
+    "tslint.suppressWhileTypeErrorsPresent": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.extension.sortImports.enableJavascript": true,
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "ruby.rubocop.useBundler": true,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.prettierPath": "/Users/alockwood/.nvm/versions/node/v12.11.1/bin",
+    "ruby.rubocop.configFilePath": "/Users/alockwood/Code/onemedical/onelife/.rubocop.yml",
+    "workbench.preferredLightColorTheme": "Solarized Light",
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.preferredDarkColorTheme": "Atom One Dark",
+    "window.autoDetectColorScheme": true,
+}
